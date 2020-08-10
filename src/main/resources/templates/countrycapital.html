@@ -1,0 +1,37 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Country Capital List</title>
+</head>
+<body>
+<h1 align="center">Country Capital</h1>
+<br/>
+<table border="1" cellpadding="10">
+    <thead>
+    <tr>
+        <th>Country</th>
+        <th>Capital</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="detail : ${details}">
+        <td th:text="${detail.countryName}">Country</td>
+        <td th:text="${detail.countryCapital}">Capital</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
